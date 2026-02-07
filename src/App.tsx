@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
 import { ShoppingBasket, Leaf, Award, MapPin, Clock, Heart } from 'lucide-react';
+import afara from './assets/aprozar_tei_afara.jpg'
+import intrare from './assets/aprozar_tei_intrare.jpg'
+import mezeluri from './assets/aprozar_tei_intrare.jpg'
 
 function App() {
   const [isVisible, setIsVisible] = useState<Record<string, boolean>>({});
@@ -42,7 +45,7 @@ function App() {
 
       <section className="relative h-screen min-h-[600px] overflow-hidden group">
         <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105"
-          style={{ backgroundImage: 'url(/aprozar_tei_afara.jpg)' }}
+          style={{ backgroundImage: `url${afara})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-primary-green/55 to-primary-green/25 group-hover:from-primary-green/65 group-hover:to-primary-green/35 transition-all duration-700" />
 
@@ -221,14 +224,14 @@ function App() {
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <div className="rounded-2xl overflow-hidden shadow-lg border-4 border-warm-beige">
               <img
-                src="/aprozar_tei_intrare.jpg"
+                src={intrare}
                 alt="Interior magazin cu produse proaspete"
                 className="w-full h-80 object-cover"
               />
             </div>
             <div className="rounded-2xl overflow-hidden shadow-lg border-4 border-warm-beige">
               <img
-                src="/aprozar_tei_mezeluri.jpg"
+                src={mezeluri}
                 alt="Mezeluri tradiționale românești"
                 className="w-full h-80 object-cover"
               />
